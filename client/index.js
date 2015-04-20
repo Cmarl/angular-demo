@@ -22,6 +22,7 @@ angular.module('alpha',[])
   };
   $scope.addNumber = function(){
     $scope.numbers.push(($scope.newNumber * 1));
+    $scope.computeNumbers();
   };
   $scope.setColor = function(number){
     if (number % 2){return 'red';}
@@ -29,6 +30,7 @@ angular.module('alpha',[])
   };
   $scope.removeNumber = function(index){
     $scope.numbers.splice(index,1);
+    $scope.computeNumbers();
   };
 }])
 .controller('rainbow',['$scope', function($scope){
